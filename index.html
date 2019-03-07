@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1">
+        <script>
+            function openMenu(){
+                document.getElementById('mobiledropdown').classList.toggle("open");
+            }
+            function transformX(x){
+                x.classList.toggle("change");
+            }
+        
+        </script>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                outline: none;
+                box-sizing: border-box;
+            }
+            body.mobile{
+                font-family: helvetica, serif;
+                font-weight: 100;
+                background-color: rgb(0, 44, 90);
+                height: auto !important;
+                height: 100%;
+                min-height: 100%;
+                width: 100%;
+                min-width: 100%;
+                max-width: 480px;
+                
+            }
+            header.mobile-header{
+                width: 100%;
+                top: 0;
+                border-bottom: solid 2px rgb(0, 0, 0, .3);
+                
+            }
+            div.mobile-container{
+                margin-top: 5px;
+                border: none;
+            }
+            img.logo{
+                /*height: auto !important;*/
+                height: 100%;
+                min-height: 100%;
+                width: 80%;
+                max-width: 480px;
+                margin-left: 6px;
+                border: none;
+            }
+            div.navbar-container{
+                width: 16%;
+                height: 3rem;
+                min-height: 100%;
+                float: right;
+                background-color: rgba(0, 44, 90);
+                margin-top: -7px;
+            }
+            span{
+                border-radius: 10px;
+                -o-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                background-color: rgb(255, 255, 255);
+            }
+            span.iconbar-1{
+                display: block;
+                width: 65%;
+                height: 10%;
+                margin: 13px 10px 5px 11px;
+            }
+            span.iconbar-2{
+                display: block;
+                width: 65%;
+                height: 10%;
+                margin: 5px 6px 5px 11px;
+            }
+            span.iconbar-3{
+                display: block;
+                width: 65%;
+                height: 10%;
+                margin: 5px 6px 5px 11px;
+            }
+            div#mobiledropdown{
+                border: none;
+                width: 40%;
+                position: fixed;
+                right: 0px;
+                top: 48px;
+                z-index: 100;
+                background-color: rgba(0, 44, 99, 1);
+                border-left: solid 1px rgba(227, 222, 222, 1);
+            }
+            nav.navmenu ul{
+                list-style: none;
+                width: 100%;
+                min-width: 100%;
+                border-bottom: solid 1px rgba(227, 222, 222, 1);
+            }
+            li{
+                border-bottom: solid 1px rgba(227, 222, 222, 1);
+                height: 100%;
+                width: 100%;
+            }
+            li a{
+                text-decoration: none;
+                color: rgba(255, 255, 255, 1);
+                font-size: 12px;
+                margin-left: 10px;
+                border: none;
+                min-width: 100%;
+                width: 100%;
+                display: block;
+                text-align: center;
+                margin: 5px;
+                margin-left: -3px;
+            }
+            .closed{
+                display: none;
+            }
+            .open{
+                display: block;
+            }
+            .change span.iconbar-1{
+                -webkit-transform: rotate(-45deg) translate(-5px, 10px);
+                transform: rotate(-45deg) translate(-5px, 10px);
+            }
+            .change span.iconbar-2{
+                opacity: 0;
+            }
+            .change span.iconbar-3{
+                -webkit-transform: rotate(45deg) translate(-3px,-7px);
+                transform: rotate(45deg) translate(-3px,-7px);
+            }
+            div.status-bar-container{
+                background: rgba(0, 44, 90);
+                display: inline-block;
+                height: 2rem;
+                min-height: 50%;
+                width: 100%;
+                min-width: 100%;
+                border: none;
+                margin-top: 10px;
+                padding-top: 5px; 
+            }
+            h1{
+                color: #FFF;
+                border: none;
+                margin-top: 30px;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            p.order-status{
+                color: #FFF;
+                font-size: .75rem;
+                text-align: center;
+            }
+            div.statusbar-1{
+                display: inline-block;
+                width: 55px;
+                height: 10px;
+                background-color: #FFF;
+                border-radius: 10px;
+                border-bottom-right-radius: 40px;
+                margin-left: 16px;
+                transition: 2.5s ease-in; /*just for demo*/
+                background-color: yellow; /*just for demo*/
+            }
+            div.statusbar-2{
+                display: inline-block;
+                background-color: #FFF;
+                width: 55px;
+                height: 10px;
+                border-radius: 10px;
+                border-top-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+                margin-left: -2px;
+                transition: 3.5s ease-in; /*just for demo*/
+                background-color: yellow; /*just for demo*/
+                
+            }
+            div.statusbar-3{
+                display: inline-block;
+                background-color: #FFF;
+                width: 55px;
+                height: 10px;
+                border-radius: 10px;
+                border-top-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+                margin-left: -2px;
+                
+            }
+            div.statusbar-4{
+                display: inline-block;
+                background-color: #FFF;
+                width: 55px;
+                height: 10px;
+                border-radius: 10px;
+                border-top-left-radius: 40px;
+                border-bottom-right-radius: 40px;
+                margin-left: -2px;
+                
+            }
+            div.statusbar-5{
+                display: inline-block;
+                background-color: #FFF;
+                width: 55px;
+                height: 10px;
+                border-radius: 10px;
+                border-top-left-radius: 40px;
+                margin-left: -2px;              
+            }
+            div.milestone-container{
+                margin-top: -15px;
+            }
+            p.milestone-1{
+                display: inline;
+                color: #FFF;
+                font-size: .65rem;
+                margin-left: 14px;
+            }
+            p.milestone-2{
+                display: inline;
+                color: #FFF;
+                font-size: .65rem;
+                margin-left: 7px;
+            }
+            p.milestone-3{
+                display: inline;
+                color: #FFF;
+                font-size: .65rem;
+                margin-left: 4px;
+            }
+            p.milestone-4{
+                display: inline;
+                color: #FFF;
+                font-size: .65rem;
+                margin-left: 15px;
+            }
+            p.milestone-5{
+                display: inline;
+                color: #FFF;
+                font-size: .65rem;
+                margin-left: 10px;
+            }
+            div.milestone-date{
+                height: 20px;
+                color: #FFF;
+                font-size: .65rem;
+                margin-left: 15px;
+            }
+            p.milestone-date-1{
+                display: inline;
+                margin-left: 7px;
+            }
+            p.milestone-date-2{
+                display: inline;
+                margin-left: 30px;
+            }
+            p.milestone-date-3{
+                display: inline;
+            }
+            p.milestone-date-4{
+                display: inline;
+            }
+            p.milestone-date-5{
+                display: inline;
+            }
+            h3{
+                color: #FFF;
+                text-align: center;
+                margin-top: 20px;
+            }
+            div.recent-activity-container{
+                border: solid #FFF;
+                color: #000000;
+                background-color: #fdd541;
+                margin: 10px;
+                overflow: auto;
+                height: 230px;
+            }
+            p.poster{
+                font-size: .75rem;
+            }
+            p.date{
+                float: right;
+                margin-top: -14px;
+                font-size: .75rem
+            }
+            div.question-container{
+                height: 100px;
+                color: #FFF;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            p.question-order{
+                display: inline-block;
+                border: solid;
+                width: 48%;
+                height: 75px;
+                text-align: center;
+            }
+            p.question-nit{
+                display: inline-block;
+                border: solid;
+                float: right;
+                width: 48%;
+                height: 75px;
+                text-align: center;
+            }
+            footer{
+                display: block;
+            }
+    
+        </style>
+        <title>Order Status</title>  
+    </head>
+    <body class="mobile">
+        <header class="mobile-header">
+            <div class="mobile-container">
+                <img src="miworkspaceLogoEdit2.png" class="logo">
+                <div onclick="openMenu()" class="navbar-container" onclick="transformX(this)">
+                    <span class="iconbar-1"></span>
+                    <span class="iconbar-2"></span>
+                    <span class="iconbar-3"></span>
+                </div>
+                <div id="mobiledropdown" class="closed">
+                    <nav class="navmenu">
+                        <ul class="navlist">
+                            <li><a href="https://umich.edu">Umich</a></li>
+                            <li><a href="https://wolverineaccess.umich.edu/f/u24l1s13/normal/render.uP">Wolverine Access</a></li>
+                            <li><a href="https://wolverineaccess.umich.edu/f/u24l1s85/normal/render.uPl">Faculty and Staff</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>        
+        </header>
+        <h1>Your Order...</h1>
+        <p class="order-status">is currently in production at HP.</p>
+        <div class="status-bar-container">
+            <div class="statusbar-1"></div>
+            <!--<script>
+            document.getElementByClass('statusbar-1').innerHTML;
+                if background-color == 'yellow';
+                console.log("Lets")
+            </script> -->
+            <div class="statusbar-2"></div>
+            <div class="statusbar-3"></div>
+            <div class="statusbar-4"></div>
+            <div class="statusbar-5"></div>
+        </div>
+        <div class="milestone-container">
+            <p class="milestone-1" alt="submitted">Submitted</p>
+            <p class="milestone-2" alt="production">Production</p>
+            <p class="milestone-3" alt="shipped">Shipped</p>
+            <p class="milestone-4" alt="received">Received</p>
+            <p class="milestone-5" alt="delivery">Delivery</p>
+        </div>
+        <div class="milestone-date">
+            <p class="milestone-date-1">12/14</p>
+            <p class="milestone-date-2">12/16</p>
+            <p class="milestone-date-3"></p>
+            <p class="milestone-date-4"></p>
+            <p class="milestone-date-5"></p>
+        </div>
+        <h3>Recent Activity</h3>
+        <div class="recent-activity-container">
+            <p class="poster">Michael Enochs</p>
+            <p class="date">2018-12-18 16:35:53</p>
+            <br>
+            <p class="message">Hello Angela,
+            <br><br>
+                Your order has experienced a slight delay due to the holiday.  The new estimated time of arrival is 12/30. Let me know if you have any questions or concerns. 
+                <br>
+                <br>
+                Thank you,
+                <br>
+                Michael Enochs
+                <br>
+                MiWorkspace Depot
+            </p>
+            <br>
+            <p class="poster">Michael Enochs</p>
+            <p class="date">2018-12-14</p>
+            <br>
+            <p class="message">
+                The order has been placed. Please allow 7-14 days for delivery to the Depot (provided there are no additional delays from the manufacturer. This is an estimate, times could be longer or shorter and is based on current average lead times). Once the order is received by the Depot, it will be inventoried, imaged, and delivered to Neighborhood IT. At that time they will contact you to schedule an appointment for installation.
+            </p>
+            <br>        
+        </div>
+        <div class="question-container">
+            <p class="question-order"><br>Question regarding your order?</p>
+            <p class="question-nit"><br>Question regarding installation?</p>
+        
+        </div>
+        <footer>
+        Contact Info/Content
+        </footer>
+    </body>
+
+</html>

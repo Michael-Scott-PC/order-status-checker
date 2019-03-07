@@ -1,0 +1,35 @@
+PO Number,Marketsite Order Date,Shortcode Used,Requisition ,Vendor,Why not Showcase,Vendor Shipping Details,Date Complete Order Received,Order to Vendor Delivery Time (days),Date Order Complete at Depot,Warehouse to Depot Delivery Time (days),Department Ordered For,Owned By DeptID,Item List,Order Tracking Notes,Cost
+3005299350,1/2/2019,191103,1003589217,CDW-G,,,01/09/19,5,01/09/19,0,ITS,481081,2 Axiom 8GB RAM sticks,2018-12-20 knemchik-ITS-RAM-INC1547677,$172.68
+65428,1/2/2019,421260 ,,Showcase,,,01/04/19,2,01/04/19,0,OUD,638000,"1 Apple 12  MacBook & AppleCare, 1 Apple 15  MacBook Pro & AppleCare",2018-12-24 cshawcro-oud-macbooks-INC1560678,"$3,890.00"
+3005300703,1/2/2019,650971,1003590201,HP,,,,#N/A,,#N/A,Plant,679740,1 HP 840 G5 Laptop & Warranty,2018-12-24 cshawcro-plant-840g5-INC1559489,"$1,262.00"
+3005301428,1/3/2019,108117,1003590711,HP,,Dedicated at NovaStar,,#N/A,,#N/A,ULIB,470402,15 HP E243i monitors & warranties,2019-01-03 knemchik-ULIB-E243i-INC1551915,"$3,225.00"
+65426,1/3/2019,650971,,Showcase,,,01/04/19,1,01/04/19,0,Plant,679740,"1 HP x360 1030 G4 & warranty, 1 120w TB G2",2019-01-03 msenochs-Plant-x360-1030g3-dock-INC1562881,"$1,857.00"
+3005302549,1/3/2019,104837,1003591458,Apple,config,,,#N/A,,#N/A,UMSI,415625,1 Apple 15  MacBook Pro & AppleCare+,2019-01-03 knemchik-UMSI-MBP15-INC1557469,"$2,688.00"
+65450,1/3/2019,650971,,Showcase,,,01/04/19,1,01/04/19,0,Plant,679740,"5 HP 1040 G4 Laptops & Warranties, 5 HP 120W Thunderbolt Docks",2019-01-03 chacwro-plant-1040g4-INC1562756,"$9,060.00"
+3005302711,1/3/2019,650971,1003591617,HP,,,,#N/A,,#N/A,Plant,679740,"1 HP 840 G5 Laptop & Warranty, 1 HP Ultraslim Dock",2019-01-03 cshawcro-plant-840g5-INC1562676,"$1,182.00"
+65479,1/4/2019,155872,,Showcase,,,01/07/19,1,01/07/19,0,Spectrum Center,600520,1 MBP 13  & apple care,2019-01-04 msenochs-Trotter-mbp13-INC1564486,"$1,648.00"
+65480,1/4/2019,941807,,Showcase,,,01/07/19,1,01/07/19,0,Michigan Creative,661500,1 MBA 13  & apple care, 2019-01-04 msenochs-MichiganCreative-mba13-INC1564041,"$1,532.00"
+65485,1/4/2019,104837,,Showcase,,,01/04/19,0,01/04/19,0,UMSI,415625,1 HP 840 G5 i7 laptop & warranty,2019-01-04 knemchik-UMSI-840G5i7-INC1563069,"$1,072.00"
+3005305411,1/7/2019,204420,1003593303,B&H,,,01/09/19,2,01/09/19,0,Pharm,314420,3 Crucial 8GB Ram Sticks,2019-01-03 cshawcro-pharm-ram-INC1540307,$166.05
+,1/9/2019,109740,1003597537,HP,,,,#N/A,,#N/A,UMSI,415000,1 HP 840 G5 Laptop & Warranty,2019-01-09 cshawcro-umsi-840g5-INC1560449,"$1,466.00"
+65492,1/7/2019,109740,,Showcase,,,01/07/19,0,01/07/19,0,UMSI,415000,"2 HP 24  Monitors & Warranties, 1 HP US Dock",2018-12-24 cshawcro-umsi-monitors-INC1560449,$551.00
+3005305995,1/7/2019,191103,1003593723,CDW-G,,,01/09/19,2,01/09/19,0,ITS,481081,1 Adesso iMouse,2019-01-04 msenochs-ITS-mouse-INC1519922,$33.40
+3005306141,1/7/2019,150290,1003593747,HP,,,,#N/A,,#N/A,ACUO,565000,"1 HP 840 G5 (touch) & warranty, 1 HP 840 G5 (non touch) & warranty",2019-01-03 msenochs-UCUCA-2HP840g5-INC1554219,"$2,361.24"
+3005306748,1/7/2019,104837,1003594265,HP,,,,#N/A,,#N/A,UMSI,415625,1 HP 840 G5 & warranty,2019-01-07 msenochs-UMSI-840G5-INC1565801,"$1,262.00"
+3005306756,1/7/2019,415047,1003594285,HP,,,,#N/A,,#N/A,RecSports,755100,"1 HP 840 G5 & warranty, 1 ultra slim dock",2019-01-07 msenochs-RecSports-840g5-peripherals-INC1565878,"$1,377.00"
+3005306763,1/7/2019,173799,1003594309,CDW-G,,,01/09/19,2,01/09/19,0,DoS,600105,1 HP LaserJet M607n Printer,2019-01-07 cshawcro-ds-printer-INC1562192,$727.77
+65515,1/7/2019,106042,,Showcase,,,01/08/19,1,01/08/19,0,BEC,568000,1 Apple Magic Keyboard w/ Num Pad,2019-01-07 cshawcro-bec-keyboard-INC1556584,$129.00
+3005307706,1/8/2019,137670,1003594905,HP,,,,#N/A,,#N/A,UMSI,415000,1 HP Z38c display & warranty,2019-01-08 knemchik-UMSI-Z38c-INC1561074,$965.00
+3005307957,1/8/2019,104837,1003595063,CDW-G,,,01/10/19,2,01/10/19,0,UMSI,415625,"1 Maxell AAA Batteries 36 Pack , 1 Maxell LR6 AA Batteries 48 Pack , 1 Belkin USB C to Gigabit Network Adapter USB 3 1 Gen 1 5 Gbps, 1 StarTech com USB C to HDMI Adapter USB Type C to HDMI Video Converter  ",2019-01-08 msenochs-UMSI-peripherals-INC1566443,$63.69
+65527,1/8/2019,110942,,Showcase,,,01/08/19,0,01/08/19,0,SSW,465000,6 E243i & warranties,2019-01-08 msenochs-SSW-6E243i-INC1566481,"$1,290.00"
+3005309896,1/9/2019,155722,1003596515,CDW-G,,,,#N/A,,#N/A,OSCR,600115,"1 Surface Pro , 1 surface pro type cover",2019-01-09 msenochs-OSCR-surface-840g3-INC1564090,$982.12
+3005309895,1/9/2019,155722,1003596515,HP,,,,#N/A,,#N/A,OSCR,600115,2 HP 840 G5 & warranties,2019-01-09 msenochs-OSCR-surface-840g3-INC1564090,"$2,064.00"
+3005310256,1/9/2019,155870,1003596802,HP,,,,#N/A,,#N/A,SL,600410,1 E273 & warranty,2019-01-09 msenochs-SL-E273-INC1566665,$274.00
+3005310266,1/9/2019,179301,1003596816,CDW-G,,,,#N/A,,#N/A,SoN,440000,HP power cable 3 3 ft Smart Buy  ,2019-01-09 msenochs-SoN-cable-INC1565264,$73.34
+3005310293,1/9/2019,176232,1003596876,CDW-G,,,,#N/A,,#N/A,UMTRI,567005,1 StarTech com 4 Port PCI Express USB 3 0 Card w 4 Dedicated Channels UASP,2019-01-09 msenochs-UMTRI-z2g4-INC1551698,$81.87
+3005310292,1/9/2019,176232,1003596876,HP,,,,#N/A,,#N/A,UMTRI,567005,1 Z2 G4 & warranty,2019-01-09 msenochs-UMTRI-z2g4-INC1551698,"$1,824.10"
+3005310799,1/9/2019,197817,1003597139,HP,,,,#N/A,,#N/A,SSC,692000,5 HP Thunderbolt Dock 120W G2,2019-01-09 knemchik-SSC-Docks-INC1564530,$875.00
+3005310807,1/9/2019,940324,1003597157,CDW-G,,,,#N/A,,#N/A,Depot,481440,20 Microsoft Surface USB 3.0 to Ethernet,2019-01-09 knemchik-Depot-Adapters-INC1568262,$618.40
+,1/9/2019,104837,1003597170,Apple,,,,#N/A,,#N/A,UMSI,415625,1 Apple 15  MacBook Pro Laptop & AppleCare,2018-12-20 cshawcro-umsi-mbp15-INC1553928,"$3,218.00"
+,1/10/2019,650971,,Showcase,,,,#N/A,,#N/A,Plant,679740,"1 HP 840 G5 & warranty, 1 ultra slim dock",2019-01-10 msenochs-Plant-840g5-INC1568622,"$1,193.00"
+,1/10/2019,104837,1003598253,CDW-G,,,,#N/A,,#N/A,UMSI,415625,1 Logitech M510 USB Wireless Mouse,2019-01-10 msenochs-UMSI-mouse-INC1567306,$24.97

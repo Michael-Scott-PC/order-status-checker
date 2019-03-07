@@ -1,0 +1,14 @@
+xpath("""/html/body/table[5]/tbody/tr/td[1]/table[2]/tbody/tr[1]/td[2]/table/tbody/tr[5]/td[2]/h3/a""")
+select = body > table:nth-child(7) > tbody > tr > td:nth-child(1) > table:nth-child(2) > tbody > tr:nth-child(1) > td:nth-child(2) > table > tbody > tr:nth-child(5) > td:nth-child(2) > h3 > a
+element = 
+<a href="javascript:openInfoWindow('https://eprime.austin.hp.com/is-bin/INTERSHOP.enfinity/WFS/HP-ePrime-Site/en_US/-/USD/OrderStatus-Start;sid=NOwfVOpBabkeVLY3nAadhKNO2Luh4d3MDglgClbp?CacheID=LDcQ8wBIP44AAAE6gIQkTCgt_0_0_0_1','orderhistory','width=800,height=600,scrollbars,resizable,menubar=1,toolbar=1')" target="">Order status</a>
+frame xpath("""/html/frameset/frame[2]""")
+
+"Shipped Items" span xpath("""//*[@id="itemsTab"]/li[2]/a/span""")
+"Shipped Items" anchor xpath ("""//*[@id="itemsTab"]/li[2]/a""")
+
+Cookie Popup div xpath("""/html/body/div[1]""")
+Cookie Popup close button xpath("""/html/body/div[1]/div[2]/div[4]/div[1]/div/button""")
+/html/body/div[1]/div[1]/div/button
+
+close order status page xpath("""//*[@id="ossOrderModal"]/div/div/div[3]/div/div[2]/button""")
