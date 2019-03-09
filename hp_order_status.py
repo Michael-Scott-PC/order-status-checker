@@ -26,6 +26,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 import getpass
 from time import sleep
+from selenium.webdriver.common.keys import Keys
 
 # Setup your driver path
 chrome_path = r"C:\Users\mseno\Desktop\chromedriver_win32\chromedriver.exe"
@@ -34,15 +35,41 @@ driver = webdriver.Chrome(chrome_path)
 # Start at Marketsite Alert page
 driver.get("https://wolverineaccess.umich.edu/marketsite_alert.html")
 driver.find_element_by_xpath("""//*[@id="content_static"]/p[2]/a/img""").click()
+
 username = driver.find_element_by_id("login")
 password = driver.find_element_by_id("password")
 
+def clear_uniqname():
+#    username.clear()
+    blank = driver.find_element_by_id("login")
+    blank.clear()
+
+def user_login():
+    user_name_input = input("Enter uniqname: ")
+    user_password_input = getpass.getpass("Password: ")
+    username = driver.find_element_by_id("login")
+    password = driver.find_element_by_id("password")
+    username.send_keys(user_name_input)
+    password.send_keys(user_password_input)
+    driver.find_element_by_id("loginSubmit").click()
+    
 # The end user will have to enter their uniqnmae, password and click submit on their own
-user_name_input = input("Enter uniqname: ")
-user_password_input = getpass.getpass("Password: ")
-username.send_keys(user_name_input)
-password.send_keys(user_password_input)
-driver.find_element_by_id("loginSubmit").click()
+# Check to see if a valid username and pass are entered
+logged_in = False
+while logged_in is False:
+    try:
+        user_login()
+        driver.find_element_by_id("loginSubmit").click()
+        WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.ID, "duo_form")))
+        break
+    except:
+        print('The username and/or password entered is incorrect.  Please try again.')
+        clear_uniqname()
+    
+#        WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.ID, "duo_form")))
+#    driver.page_source().contains("Two-Factor Authentication Required") == True:
+#        logged_in = True
+    
 
 # Get/Check Current URL just to see if we're on the right page
 current_url = driver.current_url
@@ -50,9 +77,11 @@ current_url = driver.current_url
 
 WebDriverWait(driver, 15).until(EC.title_contains("Shop"))
 
-sleep(3)
+
 # This clicks on the HP marketsite link
-driver.find_element_by_id("sticker-1382844").click()
+sleep(3)
+# NOTE: HP changed the sticker number once already.  Might need to choose better element.
+driver.find_element_by_id("sticker-1459161").click()
 
 # Allow the JS to fully load - this allows us to be able to click on the "order status" link
 WebDriverWait(driver, 5).until(EC.frame_to_be_available_and_switch_to_it((By.XPATH,"""/html/frameset/frame[2]""")))
@@ -136,6 +165,12 @@ def po_search(user_po_entry):
         print("Item Description: " + item_description1)
         order_quantity1 = item_descriptions[item][28]
         print("Order Quantity: " + order_quantity1)
+#        if type(item_descriptions[item][28]) == int:
+#            order_quantity1 = item_descriptions[item][28]
+#            print("Order Quantity: " + order_quantity1)
+#        elif type(item_descriptions[item][28]) == str:
+#            cancelled_item = str(item_descriptions[item][28])
+#            print("Order Quantity: " + cancelled_item)
         if item_status1 == 'Production':
             open_items1 = item_descriptions[item][32]
             print("Open Quantity: " + open_items1)
