@@ -23,10 +23,12 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 from bs4 import BeautifulSoup
 import getpass
 from time import sleep
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 
 # Setup your driver path
 chrome_path = r"C:\Users\mseno\Desktop\chromedriver_win32\chromedriver.exe"
@@ -36,13 +38,14 @@ driver = webdriver.Chrome(chrome_path)
 driver.get("https://wolverineaccess.umich.edu/marketsite_alert.html")
 driver.find_element_by_xpath("""//*[@id="content_static"]/p[2]/a/img""").click()
 
-username = driver.find_element_by_id("login")
-password = driver.find_element_by_id("password")
+#username = driver.find_element_by_id("login")
+#password = driver.find_element_by_id("password")
 
 def clear_uniqname():
-#    username.clear()
-    blank = driver.find_element_by_id("login")
-    blank.clear()
+    blank_pass = driver.find_element_by_id("password")
+    blank_pass.clear()
+    blank_uniqname = driver.find_element_by_id("login")
+    blank_uniqname.clear()
 
 def user_login():
     user_name_input = input("Enter uniqname: ")
@@ -51,31 +54,25 @@ def user_login():
     password = driver.find_element_by_id("password")
     username.send_keys(user_name_input)
     password.send_keys(user_password_input)
-    driver.find_element_by_id("loginSubmit").click()
-    
-# The end user will have to enter their uniqnmae, password and click submit on their own
+    driver.find_element_by_xpath("""//*[@id="loginSubmit"]""").submit()
+ 
+# The end user will have to enter their uniqname, password and submit on their own
 # Check to see if a valid username and pass are entered
 logged_in = False
 while logged_in is False:
     try:
         user_login()
-        driver.find_element_by_id("loginSubmit").click()
-        WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.ID, "duo_form")))
+        WebDriverWait(driver,5).until(EC.visibility_of_element_located((By.ID, "duo_form")))
         break
-    except:
+    except TimeoutException:
         print('The username and/or password entered is incorrect.  Please try again.')
         clear_uniqname()
-    
-#        WebDriverWait(driver, 5).until(EC.visibility_of_element_located((By.ID, "duo_form")))
-#    driver.page_source().contains("Two-Factor Authentication Required") == True:
-#        logged_in = True
-    
 
 # Get/Check Current URL just to see if we're on the right page
 current_url = driver.current_url
 #print ( " URL : %s" % current_url)
 
-WebDriverWait(driver, 15).until(EC.title_contains("Shop"))
+WebDriverWait(driver, 25).until(EC.title_contains("Shop"))
 
 
 # This clicks on the HP marketsite link
@@ -106,8 +103,16 @@ def clear_search():
     blank.clear()
     
 user_po_entry = False
+def validate_po():
+    if len(user_po_entry) == 10:
+        return user_po_entry
+    else:
+        print("This does not appear to be a valid HP PO#.  Please try again.")
+
 def po_search(user_po_entry):
     user_po_entry = input("Enter HP PO#: ")
+    print(type(user_po_entry))
+    validate_po()
     poNum = driver.find_element_by_id("compSearchId")
     
     poNum.send_keys(user_po_entry)
